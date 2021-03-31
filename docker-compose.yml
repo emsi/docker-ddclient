@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   ddclient:
+    image: emsi/ddclient
     build:
       context: .
     restart: unless-stopped
