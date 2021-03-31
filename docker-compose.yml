@@ -6,5 +6,6 @@ services:
     build:
       context: .
     restart: unless-stopped
+    init: true
     volumes:
       - ./ddclient.conf:/etc/ddclient.conf:ro
