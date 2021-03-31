@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  ddclient:
+    build:
+      context: .
+    restart: unless-stopped
+    volumes:
+      - ./ddclient.conf:/etc/ddclient.conf:ro
