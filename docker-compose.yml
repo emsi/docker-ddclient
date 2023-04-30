@@ -2,10 +2,13 @@ version: '3.8'
 
 services:
   ddclient:
-    image: emsi/ddclient
+    image: emsi/ddclient:ubuntu_22.04
+    container_name: ddclient
     build:
       context: .
     restart: unless-stopped
     init: true
     volumes:
       - ./ddclient.conf:/etc/ddclient.conf:ro
+    security_opt:
+      - seccomp:unconfined
